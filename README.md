@@ -2,6 +2,7 @@
 
 # brief introduction
 Mondrian created this artwork inspired by the vibrant city lights and Broadway music on the streets of Manhattan, New York. So I think color and music are important elements of this work. My individual work started in the dark, simulating a city at night, but the musical-note-shaped mouse slowly changed the overall color of the work by clicking, from dark to bright. This transformation signifies that Broadway's music awakens the city, and it is music that revitalizes the nocturnal urban landscape.
+
 ![musical-note-shaped mouse](image/p5.png)
 
 # iteration
