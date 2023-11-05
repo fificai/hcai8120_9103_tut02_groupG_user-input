@@ -11,7 +11,7 @@ let offsetY=0;
 let offsetX = 0;
 let cols=["red","yellow","blue"]
 
-
+// Create arrays to store multiple classes of rectangles:
 let rech = [] // horizontal rectangle
 let recv = [] // vertical rectangle
 let rectanglesBig = [];
@@ -175,11 +175,13 @@ function windowResized() {
 }
 
 
+
 function draw() {
 
   background(bgColor);
   textAlign(CENTER)
   fill(100)
+  text("click the rectangle to change the color, press SPACE to change the background",width/2,height*0.4)
   // Draw rectangle:
   for (let i = 0; i < recv.length; i++) {
     recv[i].draw();
@@ -215,6 +217,12 @@ function draw() {
 
   
 }
+function keyPressed(){
+  if(key==' '){
+    bgColor = 255;
+    
+  }
+}
 
 class Rectangle {
   constructor(x, y, width, height, color) {
@@ -229,7 +237,10 @@ class Rectangle {
     fill(this.color);
     if(abs(this.x-mouseX)<this.width/2 && abs(this.y-mouseY)<this.height/2){
       fill(random(cols))
-    
+      if(mouseIsPressed)
+      {
+        this.color = random(cols)
+      }
     }
     rect(this.x, this.y, this.width, this.height);
   }
