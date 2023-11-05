@@ -30,6 +30,7 @@ let bgColor = 0
 function setup() {
   createCanvas(windowWidth, windowHeight);
   music.setVolume(5);
+  frameRate(60);
   background('#000a0c');
 
   let y1 = random(0, 150);
@@ -68,15 +69,6 @@ function setup() {
     let randomRectangle = new Rectangle(y2, height+i * (50 + rectSpacing), 25, 25, randomColor);
     recv.push(randomRectangle);
   }
-  // 3
-  // for (let j = 0; j < 5; j++) {
-  //   for (let i = 0; i < number; i++) {
-  //     const randomColor = colors[j % colors.length];
-  //     let randomRectangle = new Rectangle(y2 + (1 * y1)+width, j * (100 + rectSpacing), 15, 15, randomColor);
-  //     rech.push(randomRectangle);
-  //   }
-  // }
-
   // 4
   for (let j = 0; j < 5; j++) {
     for (let i = 0; i < number; i++) {
@@ -202,7 +194,7 @@ function draw() {
   for (let i = 0; i < recv.length; i++) {
     recv[i].draw();
 
-    if(offsetY<height){
+    if(offsetY<height) {
       recv[i].y-=2;
     }
 
@@ -210,7 +202,7 @@ function draw() {
   for (let i = 0; i < rech.length; i++) {
     rech[i].draw();
 
-    if(offsetX<width){
+    if(offsetX<width) {
       rech[i].x-=2;
     }
   }
@@ -218,7 +210,7 @@ function draw() {
 
   for (let i = 0; i < rectanglesBig.length; i++) {
     rectanglesBig[i].draw();
-    if(offsetX<width){
+    if(offsetX<width ) {
       rectanglesBig[i].x-=2;
     }
 
@@ -241,6 +233,7 @@ function draw() {
   offsetX+=2
   offsetY+=2
 //Musical Note
+
   fill(230,208,38);
   noStroke();
   ellipse(mouseX, mouseY, 20, 20);
