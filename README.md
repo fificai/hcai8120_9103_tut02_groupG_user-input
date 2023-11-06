@@ -5,7 +5,7 @@ Mondrian created this artwork inspired by the vibrant city lights and Broadway m
 
 ![musical-note-shaped mouse](image/p5.png)
 
-# iteration
+# explain
 1. step1:At the beginning, the squares will move from the right and bottom to the center of the screen.
 ![1](image/p1.png)
 2. step2:When the mouse clicks on a block in the artwork, the color of the block will randomly change to any of the red, yellow, and blue colors in the original artwork， just like a city in the darkness gradually awakened by music.
